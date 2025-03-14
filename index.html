@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>IceCream</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Seymour+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/styles.css">
 </head>
 
 <body>
@@ -13,87 +17,89 @@
                 <img src="./images/logo.png" alt="Logo">
             </a>
             <nav>
-                <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="#how_its_made">How it's made?</a></li>
-                    <li><a href="#products">Our products</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
+                <ul class="nav-list list">
+                    <li><a href="" class="link">Home</a></li>
+                    <li><a href="#how_its_made" class="link">How it's made?</a></li>
+                    <li><a href="#products" class="link">Our products</a></li>
+                    <li><a href="#contacts" class="link">Contacts</a></li>
                 </ul>
             </nav>
 
-            <button type="button">Buy now</button>
+            <button type="button" class="btn primary-btn">Buy now</button>
         </div>
     </header>
 
     <main>
-        <section>
-            <h1>ICE CREAM MADE WITH PASSION</h1>
+        <section class="hero">
+            <h1 class="title">ICE CREAM MADE WITH PASSION</h1>
 
-            <ul>
+            <ul class="list">
                 <li>
-                    <a href="#products">Products</a>
+                    <a href="#products" class="secondary-btn btn link">Products</a>
                 </li>
                 <li>
-                    <a href="#how_its_made">How it's made?</a>
+                    <a href="#how_its_made" class="hero-link">How it's made?</a>
                 </li>
             </ul>
             
             <div>
-                <p>16 cafes</p>
-                <p>23 food trucks</p>
+                <p><span class="number">16</span> cafes</p>
+                <p><span class="number">23</span> food trucks</p>
             </div>
             
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+            <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
         </section>
 
-        <section id="products">
-            <p>100% NATURAL</p>
-            <h2>PRODUCTS</h2>
+        <section id="products" class="products">
+            <p class="pre-title">100% NATURAL</p>
+            <h2 class="title">PRODUCTS</h2>
 
-            <ul>
+            <ul class="product-list list">
                 <li>
-                    <h3>ICE CREAM</h3>
+                    <h3 class="product-name">ICE CREAM</h3>
                     <p>Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural stabilizer</p>
                 </li>
                 <li>
-                    <h3>ICE COFFEE</h3>
+                    <h3 class="product-name">ICE COFFEE</h3>
                     <p>Fragrant invigorating drink created from 100% natural ingredients without the use of preservatives and flavor enhancers</p>
                 </li>
                 <li>
-                    <h3>MILKSHAKES</h3>
+                    <h3 class="product-name">MILKSHAKES</h3>
                     <p>Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries and other sweets of your choice</p>
                 </li>
             </ul>
         </section>
 
-        <section id="how_its_made">
-            <p>TRADITION AND LOVE</p>
-            <h2>HOW IT'S MADE?</h2>
+        <section id="how_its_made" class="how-its-made">
+            <p class="pre-title">TRADITION AND LOVE</p>
+            <h2 class="title">HOW IT'S MADE?</h2>
 
-            <p>Ice is a place where you will become not only a little happier, but also healthier. Health is the main value for us, and we follow it when creating our handmade desserts.</p>
+            <div class="description">
+                <p>Ice is a place where you will become not only a little happier, but also healthier. Health is the main value for us, and we follow it when creating our handmade desserts.</p>
             
-            <p>We use traditional recipes and 100% natural ingredients. Our products are so natural that they can be given to children from the age of three years. Sweets lovers can expect 55 types of ice cream, 15 types of coffee and 23 milkshakes.</p>
-            
-            <p>This is enough to choose ice cream and coffee for any mood!</p>
+                <p>We use traditional recipes and 100% natural ingredients. Our products are so natural that they can be given to children from the age of three years. Sweets lovers can expect 55 types of ice cream, 15 types of coffee and 23 milkshakes.</p>
+                
+                <p>This is enough to choose ice cream and coffee for any mood!</p>
+            </div>
 
-            <button type="button">Read more</button>
+            <button type="button" class="btn primary-btn">Read more</button>
         </section>
 
-        <section>
+        <section class="advantages">
             <h2>Advantages</h2>
 
-            <ul>
+            <ul class="advantage-list list">
                 <li>
-                    <p>721</p>
-                    <p>Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+                    <p class="numbers">721</p>
+                    <p class="description">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
                 </li>
                 <li>
-                    <p>16kg</p>
-                    <p>Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+                    <p class="numbers">16kg</p>
+                    <p class="description">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
                 </li>
                 <li>
-                    <p>84</p>
-                    <p>Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
+                    <p class="numbers">84</p>
+                    <p class="description">Aliquam ac dui vel dui vulputate consectetur. Mauris massa.</p>
                 </li>
             </ul>
         </section>
@@ -101,7 +107,7 @@
         <section>
             <h2>Gallery</h2>
 
-            <ul>
+            <ul class="list">
                 <li>
                     <img src="./images/gallery1.jpg" alt="A lot of ice cream">
                 </li>
@@ -117,110 +123,110 @@
         <section>
             <h2>Customer Reviews</h2>
 
-            <ul>
+            <ul class="review-list list">
                 <li>
                     <img src="./images/customer1.jpg" alt="Emily's photo">
-                    <p>I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In addition, you have beautiful serving, cozy atmosphere and polite staff.</p>
-                    <p>Emily, Los Angeles</p>
+                    <p class="review">I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In addition, you have beautiful serving, cozy atmosphere and polite staff.</p>
+                    <p class="customer-name">Emily, Los Angeles</p>
                 </li>
                 <li>
                     <img src="./images/customer2.jpg" alt="Bryan's photo">
-                    <p>Every day we come to you with friends after classes in college. We love your ice cream and casual atmosphere!</p>
-                    <p>Bryan, New-York</p>
+                    <p class="review">Every day we come to you with friends after classes in college. We love your ice cream and casual atmosphere!</p>
+                    <p class="customer-name">Bryan, New-York</p>
                 </li>
                 <li>
                     <img src="./images/customer3.jpg" alt="Diana's photo">
-                    <p>Ice cream is my passion! I love your chocolate hazelnut ice cream! And I really like the excellent service - always served politely and quickly!</p>
-                    <p>Diana, Chicago</p>
+                    <p class="review">Ice cream is my passion! I love your chocolate hazelnut ice cream! And I really like the excellent service - always served politely and quickly!</p>
+                    <p class="customer-name">Diana, Chicago</p>
                 </li>
             </ul>
         </section>
 
-        <section id="contacts">
+        <section id="contacts" class="contacts">
             <h2>Contacts</h2>
 
-            <ul>
-                <li>
+            <ul class="contact-list list">
+                <li class="contact-list-item">
                     <p>CAFE</p>
-                    <h3>Chicago</h3>
-                    <address>10340 Ridgeland Ave, Chicago Ridge, IL 60415, USA</address>
+                    <h3 class="city">Chicago</h3>
+                    <address class="address">10340 Ridgeland Ave, Chicago Ridge, IL 60415, USA</address>
 
-                    <ul>
+                    <ul class="work-hour-list list">
                         <li>
-                            <p>Monday - Friday</p>
-                            <p>06:00 AM - 10:00 PM</p>
+                            <p class="days">Monday - Friday</p>
+                            <p class="work-hours">06:00 AM - 10:00 PM</p>
                         </li>
                         <li>
-                            <p>Saturday - Sunday</p>
-                            <p>08:00 AM - 16:00 PM</p>
+                            <p class="days">Saturday - Sunday</p>
+                            <p class="work-hours">08:00 AM - 16:00 PM</p>
                         </li>
                     </ul>
                     
                     <div>
-                        <a href="tel:+610383766284">+61(0) 383 766 284</a>
-                        <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+                        <a href="tel:+610383766284" class="link">+61(0) 383 766 284</a>
+                        <a href="mailto:noreply@envato.com" class="link">noreply@envato.com</a>
                     </div>
                 </li>
-                <li>
+                <li class="contact-list-item">
                     <p>FOOD TRUCK</p>
-                    <h3>Los Angeles</h3>
-                    <address>1003 Manhattan Ave, Manhattan Beach, CA 90263, USA</address>
+                    <h3 class="city">Los Angeles</h3>
+                    <address class="address">1003 Manhattan Ave, Manhattan Beach, CA 90263, USA</address>
 
-                    <ul>
+                    <ul class="work-hour-list list">
                         <li>
-                            <p>Monday - Friday</p>
-                            <p>06:00 AM - 10:00 PM</p>
+                            <p class="days">Monday - Friday</p>
+                            <p class="work-hours">06:00 AM - 10:00 PM</p>
                         </li>
                         <li>
-                            <p>Saturday - Sunday</p>
-                            <p>08:00 AM - 16:00 PM</p>
+                            <p class="days">Saturday - Sunday</p>
+                            <p class="work-hours">08:00 AM - 16:00 PM</p>
                         </li>
                     </ul>
                     
                     <div>
-                        <a href="tel:+610383766284">+61(0) 383 766 284</a>
-                        <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+                        <a href="tel:+610383766284" class="link">+61(0) 383 766 284</a>
+                        <a href="mailto:noreply@envato.com" class="link">noreply@envato.com</a>
                     </div>
                 </li>
-                <li>
+                <li class="contact-list-item">
                     <p>CAFE</p>
-                    <h3>New York</h3>
-                    <address>726 Sterling Pl, Brooklyn, NY 11222, USA</address>
+                    <h3 class="city">New York</h3>
+                    <address class="address">726 Sterling Pl, Brooklyn, NY 11222, USA</address>
 
-                    <ul>
+                    <ul class="work-hour-list list">
                         <li>
-                            <p>Monday - Friday</p>
-                            <p>06:00 AM - 10:00 PM</p>
+                            <p class="days">Monday - Friday</p>
+                            <p class="work-hours">06:00 AM - 10:00 PM</p>
                         </li>
                         <li>
-                            <p>Saturday - Sunday</p>
-                            <p>08:00 AM - 16:00 PM</p>
+                            <p class="days">Saturday - Sunday</p>
+                            <p class="work-hours">08:00 AM - 16:00 PM</p>
                         </li>
                     </ul>
                     
                     <div>
-                        <a href="tel:+610383766284">+61(0) 383 766 284</a>
-                        <a href="mailto:noreply@envato.com">noreply@envato.com</a>
+                        <a href="tel:+610383766284" class="link">+61(0) 383 766 284</a>
+                        <a href="mailto:noreply@envato.com" class="link">noreply@envato.com</a>
                     </div>
                 </li>
             </ul>
 
-            <ul>
+            <ul class="list">
                 <li>
-                    <button type="button">Our Locations</button>
+                    <button type="button" class="primary-btn btn">Our Locations</button>
                 </li>
                 <li>
-                    <button type="button">Franshise</button>
+                    <button type="button" class="secondary-btn btn">Franshise</button>
                 </li>
             </ul>
         </section>
     </main>
 
-    <footer>
-        <p>HOMEMADE ICE CREAM MADE</p>
-        <p>WITH PASSION</p>
+    <footer class="footer">
+        <p class="title">HOMEMADE ICE CREAM MADE</p>
+        <p class="title-end">WITH PASSION</p>
 
-        <ul>
+        <ul class="list">
             <li>
                 <a href="https://github.com" target="_blank" aria-label="Github link">Github</a>
             </li>
@@ -232,11 +238,11 @@
             </li>
         </ul>
 
-        <p>Feel free to contact 
-            <a href="tel:+610383766284">+61(0) 383 766 284</a>
+        <p class="footer-contact">Feel free to contact 
+            <a href="tel:+610383766284" class="footer-tel link">+61(0) 383 766 284</a>
         </p>
 
-        <p>© 2022 - IceCream. All Rights Reserved.</p>
+        <p class="copyright">© 2022 - IceCream. All Rights Reserved.</p>
     </footer>
 </body>
 </html>

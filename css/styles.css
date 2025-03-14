@@ -1,0 +1,290 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+:root {
+    --background-green-color: #84A178;
+    --accent-yellow-color: #F8D24E;
+    --primary-white-color: #FCFCFC;
+    --primary-black-color: #131313;
+    --white-color: #ffffff;
+    --black-color: #000000;
+    --green-color: #AEC6A5;
+    --yellow-color: #EFD478;
+    --red-color: #D6936D;
+    --grey-color: #7A7A7A;
+    --light-grey-color: #ABABAB;
+    --hover-green-color: #0A8817;
+}
+
+body {
+    background-color: var(--background-green-color);
+    color: var(--primary-white-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+}
+
+
+/* Header */
+
+.list {
+    list-style: none;
+}
+
+.link {
+    text-decoration: none;
+}
+
+.nav-list .link {
+    color: inherit;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.nav-list .link:hover, 
+.nav-list .link:focus {
+    color: var(--accent-yellow-color);
+}
+
+.btn {
+    color: var(--black-color);
+    font-family: inherit;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.28;
+    cursor: pointer;
+}
+
+.primary-btn {
+    background-color: var(--accent-yellow-color);
+}
+
+.primary-btn:hover {
+    background-color: var(--hover-green-color);
+}
+
+.primary-btn:focus {
+    background-color: var(--hover-green-color);
+    color: var(--white-color);
+}
+
+.secondary-btn:focus {
+    color: var(--primary-white-color);
+}
+
+
+/* Hero */
+
+.hero > .title,
+.products > .title,
+.how-its-made > .title {
+    font-family: "Seymour One", sans-serif;
+}
+
+.hero > .title {
+    font-size: 38px;
+    letter-spacing: 0.04em;
+}
+
+.hero-link {
+    color: var(--accent-yellow-color);
+    font-size: 14px;
+    line-height: 1.28;
+    font-weight: 600;
+}
+
+.hero-link:hover {
+    color: var(--hover-green-color);
+}
+
+.hero-link:focus {
+    color: var(--primary-white-color);
+}
+
+.number {
+    color: var(--primary-black-color);
+    font-weight: 900;
+    font-size: 46px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+}
+
+.hero .text {
+    line-height: 1.4;
+}
+
+
+/* Products */
+
+.products {
+    color: var(--primary-black-color);
+}
+
+.pre-title {
+    text-align: center;
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+}
+
+.products > .title {
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 0.06em;
+}
+
+.product-name {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+}
+
+.product-list p {
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+}
+
+
+/* How its made */
+
+.how-its-made > .title {
+    text-align: center;
+    font-size: 36px;
+    letter-spacing: 0.06em;
+}
+
+.description p {
+    line-height: 1.94;
+    letter-spacing: 0.04em;
+}
+
+.description p:first-child {
+    font-size: 16px;
+    line-height: 1.76;
+}
+
+
+/* Advantages */
+
+.advantage-list .numbers {
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 1.22;
+    letter-spacing: 0.04em;
+}
+
+.advantage-list .description {
+    font-size: 16px;
+    line-height: 1.76;
+    letter-spacing: 0.02em;
+}
+
+
+/* Reviews */
+
+.review-list p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.86;
+}
+
+.review {
+    letter-spacing: 0.04em;
+}
+
+.customer-name {
+    color: var(--primary-black-color);
+}
+
+
+/* Contacts */
+
+.contacts {
+    color: var(--primary-black-color);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.contact-list-item {
+    background-color: var(--white-color);
+}
+
+.contact-list-item > p {
+    letter-spacing: 0.04em;
+    line-height: 1.4;
+}
+
+.city {
+    letter-spacing: 0.04em;
+    line-height: 1.86;
+}
+
+.address {
+    letter-spacing: 0.04em;
+    line-height: 1.83;
+    color: var(--red-color);
+}
+
+.work-hour-list {
+    line-height: 1.86;
+}
+
+.days {
+    letter-spacing: 0.04em;
+}
+
+.work-hours {
+    color: var(--light-grey-color);
+}
+
+.contact-list .link {
+    color: inherit;
+    line-height: 1.5;
+}
+
+
+/* Footer */
+
+.footer > .title {
+    font-size: 30px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+}
+
+.footer >.title-end {
+    font-weight: 700;
+    font-size: 58px;
+    line-height: 1.2;
+    letter-spacing: 0.06em;
+}
+
+.footer-contact {
+    color: var(--primary-black-color);
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+}
+
+.footer-tel {
+    color: var(--white-color);
+}
+
+.copyright {
+    color: var(--grey-color);
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+}
