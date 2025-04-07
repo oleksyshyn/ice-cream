@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IceCream</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Seymour+One&display=swap" rel="stylesheet">
@@ -28,15 +29,19 @@
                     </ul>
                 </nav>
     
-                <button type="button" class="btn primary-btn">Buy now</button>
+                <button type="button" class="btn primary-btn">Buy now
+                    <svg class="icon-arrow">
+                        <use href="./images/icons.svg#icon-arrow"></use>
+                    </svg>
+                </button>
             </div>
         </div>
     </header>
 
     <main>
         <section class="hero">
-            <div class="container">
-                <div class="hero-container">
+            <div class="container hero-container">
+                <div class="hero-content">
                     <div>
                         <h1 class="hero-title">ICE CREAM MADE WITH PASSION</h1>
     
@@ -56,7 +61,18 @@
                     </div>
                 </div>
                 
-                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+                <div class="hero-details">
+                    <img src="./images/ice-cream-circle.png" alt="ice-cream on plate">
+                    <div class="hero-info">
+                        <p id="hero-text" class="hero-text">Indulge in a scoop of ice cream made with passion and treat your taste buds to an unforgettable experience!</p>
+                        <button id="hero-arrow-btn" type="button" class="arrow-btn">
+                            <svg id="arrow" class="icon-long-arrow">
+                                <use href="./images/icons.svg#icon-long-arrow"></use>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <img class="big-ice-cream" src="./images/big-ice-cream.png" alt="ice-cream">
             </div>
         </section>
 
@@ -66,17 +82,32 @@
                 <h2 class="title">PRODUCTS</h2>
 
                 <ul class="product-list list">
-                    <li class="item">
+                    <li class="product-list-item">
                         <h3 class="product-name">ICE CREAM</h3>
                         <p>Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural stabilizer</p>
+                        <button class="arrow-btn">
+                            <svg class="icon-long-arrow">
+                                <use href="./images/icons.svg#icon-long-arrow"></use>
+                            </svg>
+                        </button>
                     </li>
-                    <li class="item">
+                    <li class="product-list-item">
                         <h3 class="product-name">ICE COFFEE</h3>
                         <p>Fragrant invigorating drink created from 100% natural ingredients without the use of preservatives and flavor enhancers</p>
+                        <button class="arrow-btn">
+                            <svg class="icon-long-arrow">
+                                <use href="./images/icons.svg#icon-long-arrow"></use>
+                            </svg>
+                        </button>
                     </li>
-                    <li class="item">
+                    <li class="product-list-item">
                         <h3 class="product-name">MILKSHAKES</h3>
                         <p>Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries and other sweets of your choice</p>
+                        <button class="arrow-btn">
+                            <svg class="icon-long-arrow">
+                                <use href="./images/icons.svg#icon-long-arrow"></use>
+                            </svg>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -88,16 +119,19 @@
                 <h2 class="title">HOW IT'S MADE?</h2>
 
                 <div class="content">
-                    <div class="cow-circle"></div>
                     <div class="description">
-                        <div>
+                        <div class="description-text">
                             <p class="text">Ice is a place where you will become not only a little happier, but also healthier. Health is the main value for us, and we follow it when creating our handmade desserts.</p>
                         
                             <p class="text">We use traditional recipes and 100% natural ingredients. Our products are so natural that they can be given to children from the age of three years. Sweets lovers can expect 55 types of ice cream, 15 types of coffee and 23 milkshakes.</p>
                             
                             <p class="text">This is enough to choose ice cream and coffee for any mood!</p>
                         </div>
-                        <button type="button" class="btn primary-btn">Read more</button>
+                        <button type="button" class="btn primary-btn">Read more
+                            <svg class="icon-arrow">
+                                <use href="./images/icons.svg#icon-arrow"></use>
+                            </svg>
+                        </button>
                     </div>
                 </div>
             </div>
@@ -123,43 +157,46 @@
                 </ul>
             </div>
         </section>
-
+        
         <section class="gallery">
             <h2 class="visually-hidden">Gallery</h2>
 
-                <ul class="list">
-                    <li>
-                        <img src="./images/gallery1.jpg" alt="A lot of ice cream">
-                    </li>
-                    <li>
-                        <img src="./images/gallery2.jpg" alt="Five ice cream cones">
-                    </li>
-                    <li>
-                        <img src="./images/gallery3.jpg" alt="Five popsicles">
-                    </li>
-                </ul>
-        </section>
+            <div class="swiper photoSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="./images/gallery1.jpg" alt="A lot of ice cream"></div>
+                    <div class="swiper-slide"><img src="./images/gallery2.jpg" alt="Five ice cream cones"></div>
+                    <div class="swiper-slide"><img src="./images/gallery3.jpg" alt="Five popsicles"></div>
+                </div>
+            </div>
 
-        <section class="reviews">
-            <h2 class="visually-hidden">Customer Reviews</h2>
-
-            <ul class="review-list list">
-                <li>
-                    <img src="./images/customer1.jpg" alt="Emily's photo">
-                    <p class="review">I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In addition, you have beautiful serving, cozy atmosphere and polite staff.</p>
-                    <p class="customer-name">Emily, Los Angeles</p>
-                </li>
-                <li>
-                    <img src="./images/customer2.jpg" alt="Bryan's photo">
-                    <p class="review">Every day we come to you with friends after classes in college. We love your ice cream and casual atmosphere!</p>
-                    <p class="customer-name">Bryan, New-York</p>
-                </li>
-                <li>
-                    <img src="./images/customer3.jpg" alt="Diana's photo">
-                    <p class="review">Ice cream is my passion! I love your chocolate hazelnut ice cream! And I really like the excellent service - always served politely and quickly!</p>
-                    <p class="customer-name">Diana, Chicago</p>
-                </li>
-            </ul>
+            <div class="swiper reviewSwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="review">
+                            <img src="./images/customer1.jpg" alt="Emily's photo">
+                            <p class="review-text">I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In addition, you have beautiful serving, cozy atmosphere and polite staff.</p>
+                            <p class="customer-name">Emily, Los Angeles</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review">
+                            <img src="./images/customer2.jpg" alt="Bryan's photo">
+                            <p class="review-text">Every day we come to you with friends after classes in college. We love your ice cream and casual atmosphere!</p>
+                            <p class="customer-name">Bryan, New-York</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review">
+                            <img src="./images/customer3.jpg" alt="Diana's photo">
+                            <p class="review-text">Ice cream is my passion! I love your chocolate hazelnut ice cream! And I really like the excellent service - always served politely and quickly!</p>
+                            <p class="customer-name">Diana, Chicago</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="swiper-pagination"></div>
+            </div>
+                
         </section>
 
         <section id="contacts" class="contacts">
@@ -234,10 +271,18 @@
     
                 <ul class="button-list list">
                     <li>
-                        <button type="button" class="primary-btn btn">Our Locations</button>
+                        <button type="button" class="primary-btn btn">Our Locations
+                            <svg class="icon-arrow">
+                                <use href="./images/icons.svg#icon-arrow"></use>
+                            </svg>
+                        </button>
                     </li>
                     <li>
-                        <button type="button" class="secondary-btn btn">Franshise</button>
+                        <button type="button" class="secondary-btn btn">Franshise
+                            <svg class="icon-arrow">
+                                <use href="./images/icons.svg#icon-arrow"></use>
+                            </svg>
+                        </button>
                     </li>
                 </ul>
             </div>
@@ -254,18 +299,24 @@
             <div class="wrapper">
                 <ul class="social-media-list list">
                     <li class="item">
-                        <a href="https://github.com" target="_blank" aria-label="Github link">
-                            <span></span>
+                        <a href="https://github.com" class="social-media-link" target="_blank" aria-label="Github link">
+                            <svg class="social-media" width="20" height="20">
+                                <use href="./images/icons.svg#icon-github"></use>
+                            </svg>
                         </a>
                     </li>
                     <li class="item">
-                        <a href="https://telegram.org" target="_blank" aria-label="Telegram link">
-                            <span></span>
+                        <a href="https://telegram.org" class="social-media-link" target="_blank" aria-label="Telegram link">
+                            <svg class="social-media" width="20" height="16">
+                                <use href="./images/icons.svg#icon-telegram"></use>
+                            </svg>
                         </a>
                     </li>
                     <li class="item">
-                        <a href="https://www.facebook.com" target="_blank" aria-label="Facebook link">
-                            <span></span>
+                        <a href="https://www.facebook.com" class="social-media-link" target="_blank" aria-label="Facebook link">
+                            <svg class="social-media" width="10" height="20">
+                                <use href="./images/icons.svg#icon-facebook"></use>
+                            </svg>
                         </a>
                     </li>
                 </ul>
@@ -278,5 +329,9 @@
 
         <p class="copyright">© 2022 - IceCream. All Rights Reserved.</p>
     </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script type="module" src="./js/swiper.js"></script>
+    <script type="module" src="./js/hero-arrow.js"></script>
 </body>
 </html>
