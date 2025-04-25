@@ -29,7 +29,7 @@
                     </ul>
                 </nav>
     
-                <button type="button" class="btn primary-btn">Buy now
+                <button type="button" class="btn primary-btn open-modal-btn" data-modal-target="modal-buynow">Buy now
                     <svg class="icon-arrow">
                         <use href="./images/icons.svg#icon-arrow"></use>
                     </svg>
@@ -85,7 +85,7 @@
                     <li class="product-list-item">
                         <h3 class="product-name">ICE CREAM</h3>
                         <p>Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural stabilizer</p>
-                        <button class="arrow-btn">
+                        <button class="arrow-btn open-modal-btn" data-modal-target="modal-ice-cream">
                             <svg class="icon-long-arrow">
                                 <use href="./images/icons.svg#icon-long-arrow"></use>
                             </svg>
@@ -94,7 +94,7 @@
                     <li class="product-list-item">
                         <h3 class="product-name">ICE COFFEE</h3>
                         <p>Fragrant invigorating drink created from 100% natural ingredients without the use of preservatives and flavor enhancers</p>
-                        <button class="arrow-btn">
+                        <button class="arrow-btn open-modal-btn" data-modal-target="modal-ice-coffee">
                             <svg class="icon-long-arrow">
                                 <use href="./images/icons.svg#icon-long-arrow"></use>
                             </svg>
@@ -103,7 +103,7 @@
                     <li class="product-list-item">
                         <h3 class="product-name">MILKSHAKES</h3>
                         <p>Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries and other sweets of your choice</p>
-                        <button class="arrow-btn">
+                        <button class="arrow-btn open-modal-btn" data-modal-target="modal-milkshakes">
                             <svg class="icon-long-arrow">
                                 <use href="./images/icons.svg#icon-long-arrow"></use>
                             </svg>
@@ -127,7 +127,7 @@
                             
                             <p class="text">This is enough to choose ice cream and coffee for any mood!</p>
                         </div>
-                        <button type="button" class="btn primary-btn">Read more
+                        <button type="button" class="btn primary-btn open-modal-btn" data-modal-target="modal-readmore">Read more
                             <svg class="icon-arrow">
                                 <use href="./images/icons.svg#icon-arrow"></use>
                             </svg>
@@ -271,14 +271,14 @@
     
                 <ul class="button-list list">
                     <li>
-                        <button type="button" class="primary-btn btn">Our Locations
+                        <button type="button" class="primary-btn btn open-modal-btn" data-modal-target="modal-locations">Our Locations
                             <svg class="icon-arrow">
                                 <use href="./images/icons.svg#icon-arrow"></use>
                             </svg>
                         </button>
                     </li>
                     <li>
-                        <button type="button" class="secondary-btn btn">Franshise
+                        <button type="button" class="secondary-btn btn open-modal-btn" data-modal-target="modal-franchise">Franshise
                             <svg class="icon-arrow">
                                 <use href="./images/icons.svg#icon-arrow"></use>
                             </svg>
@@ -330,8 +330,330 @@
         <p class="copyright">© 2022 - IceCream. All Rights Reserved.</p>
     </footer>
 
+
+    <!-- Backdrop and modals -->
+
+    <div class="backdrop" id="modal-backdrop"></div>
+
+    <div class="modal modal-buynow" id="modal-buynow">
+        <button type="button" class="close-modal-btn">
+            <svg class="icon-close">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+
+        <form class="form" autocomplete="off">
+            <h2 class="modal-title">Buy now</h2>
+
+            <ul class="buynow-products-list list">
+                <li class="buynow-products-item">
+                    <label>
+                        <input class="checkbox" type="checkbox" name="products" value="icecream" >
+                        <span class="product-checkbox checkbox-icecream">ICE CREAM</span>
+                    </label>
+                </li>
+                <li class="buynow-products-item">
+                    <label>
+                        <input class="checkbox" type="checkbox" name="products" value="icecoffe" checked>
+                        <span class="product-checkbox checkbox-icecoffee">ICE COFFEE</span>
+                    </label>
+                </li>
+                <li class="buynow-products-item">
+                    <label>
+                        <input class="checkbox" type="checkbox" name="products" value="milkshake" >
+                        <span class="product-checkbox checkbox-milkshake">MILKSHAKE</span>
+                    </label>
+                </li>
+            </ul>
+        
+            
+            <input class="buynow-modal-form-inputs" type="text" name="name" placeholder="Name" pattern="^[a-zA-Zа-яА-ЯёЁ]+\s[a-zA-Zа-яА-ЯёЁ]+$" title="Username must be two words separated by space." required>
+            <input class="buynow-modal-form-inputs" type="tel" name="phone" placeholder="Phone" pattern="^\+[1-9]\d{1,14}$" title="The phone number must start with +, contain only numbers and no spaces." required>
+            <textarea class="buynow-modal-form-inputs" name="comment" placeholder="Comment"></textarea>
+        
+            <button type="submit" class="modal-btn">Submit</button>
+        </form>
+    </div>
+
+
+    <div class="modal modal-product modal-ice-cream" id="modal-ice-cream">
+        <button type="button" class="close-modal-btn">
+            <svg class="icon-close">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+
+        <h2 class="modal-title">Chocolate icecream</h2>
+
+        <div class="product-background">
+            <img class="product-background-image" src="./images/chocolate-icecream.png" alt="chocolate-icecream">
+        </div>
+
+        <ul class="product-info-list list">
+            <li class="product-info">
+                <p class="product-info-number">320</p>
+                <p class="product-info-description">Kcal</p>
+            </li>
+            <li class="product-info">
+                <p class="product-info-number">4g </p>
+                <p class="product-info-description">Protein...</p>
+            </li>
+            <li class="product-info">
+                <p class="product-info-number">8,2g</p>
+                <p class="product-info-description">Fats</p>
+            </li>
+            <li class="product-info">
+                <p class="product-info-number">40,4g</p>
+                <p class="product-info-description">Carbs</p>
+            </li>
+        </ul>
+
+        <h3 class="ingredient-title">Ingredients</h3>
+
+        <ul class="ingredient-list list">
+            <li class="ingredient-item">
+                <p>Milk</p>
+                <p>100ml</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Belgian chocolate</p>
+                <p>20g</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Cream</p>
+                <p>150ml</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Cocoa powder</p>
+                <p>30g</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Sugar</p>
+                <p>40g</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Vanilla sugar</p>
+                <p>10g</p>
+            </li>
+        </ul>
+
+        <form class="form" autocomplete="off">
+            <input type="text" name="name" placeholder="Name" pattern="^[a-zA-Zа-яА-ЯёЁ]+\s[a-zA-Zа-яА-ЯёЁ]+$" title="Username must be two words separated by space." required>
+            <input type="tel" name="phone" placeholder="Phone" pattern="^\+[1-9]\d{1,14}$" title="The phone number must start with +, contain only numbers and no spaces." required>
+            <textarea name="comment" placeholder="Comment"></textarea>
+            <button type="submit" class="modal-btn">Submit</button>
+        </form>
+    </div>
+
+
+    <div class="modal modal-product modal-ice-coffee" id="modal-ice-coffee">
+        <button type="button" class="close-modal-btn">
+            <svg class="icon-close">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+
+        <h2 class="modal-title">Ice coffee</h2>
+
+        <div class="product-background">
+            <img class="product-background-image" src="./images/product2.png" alt="chocolate-icecream" width="132" height="132">
+        </div>
+
+        <ul class="product-info-list list">
+            <li class="product-info">
+                <p class="product-info-number">320</p>
+                <p class="product-info-description">Kcal</p>
+            </li>
+            <li class="product-info">
+                <p class="product-info-number">4g </p>
+                <p class="product-info-description">Protein...</p>
+            </li>
+            <li class="product-info">
+                <p class="product-info-number">8,2g</p>
+                <p class="product-info-description">Fats</p>
+            </li>
+            <li class="product-info">
+                <p class="product-info-number">40,4g</p>
+                <p class="product-info-description">Carbs</p>
+            </li>
+        </ul>
+
+        <h3 class="ingredient-title">Ingredients</h3>
+
+        <ul class="ingredient-list list">
+            <li class="ingredient-item">
+                <p>Milk</p>
+                <p>100ml</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Belgian chocolate</p>
+                <p>20g</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Cream</p>
+                <p>150ml</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Cocoa powder</p>
+                <p>30g</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Sugar</p>
+                <p>40g</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Vanilla sugar</p>
+                <p>10g</p>
+            </li>
+        </ul>
+
+        <form class="form" autocomplete="off">
+            <input type="text" name="name" placeholder="Name" pattern="^[a-zA-Zа-яА-ЯёЁ]+\s[a-zA-Zа-яА-ЯёЁ]+$" title="Username must be two words separated by space." required>
+            <input type="tel" name="phone" placeholder="Phone" pattern="^\+[1-9]\d{1,14}$" title="The phone number must start with +, contain only numbers and no spaces." required>
+            <textarea name="comment" placeholder="Comment"></textarea>
+            <button type="submit" class="modal-btn">Submit</button>
+        </form>
+    </div>
+
+
+    <div class="modal modal-product modal-milkshakes" id="modal-milkshakes">
+        <button type="button" class="close-modal-btn">
+            <svg class="icon-close">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+
+        <h2 class="modal-title">Milkshakes</h2>
+
+        <div class="product-background">
+            <img class="product-background-image" src="./images/product3.png" alt="chocolate-icecream" width="132" height="132">
+        </div>
+
+        <ul class="product-info-list list">
+            <li class="product-info">
+                <p class="product-info-number">320</p>
+                <p class="product-info-description">Kcal</p>
+            </li>
+            <li class="product-info">
+                <p class="product-info-number">4g </p>
+                <p class="product-info-description">Protein...</p>
+            </li>
+            <li class="product-info">
+                <p class="product-info-number">8,2g</p>
+                <p class="product-info-description">Fats</p>
+            </li>
+            <li class="product-info">
+                <p class="product-info-number">40,4g</p>
+                <p class="product-info-description">Carbs</p>
+            </li>
+        </ul>
+
+        <h3 class="ingredient-title">Ingredients</h3>
+
+        <ul class="ingredient-list list">
+            <li class="ingredient-item">
+                <p>Milk</p>
+                <p>100ml</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Belgian chocolate</p>
+                <p>20g</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Cream</p>
+                <p>150ml</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Cocoa powder</p>
+                <p>30g</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Sugar</p>
+                <p>40g</p>
+            </li>
+            <li class="ingredient-item">
+                <p>Vanilla sugar</p>
+                <p>10g</p>
+            </li>
+        </ul>
+
+        <form class="form" autocomplete="off">
+            <input type="text" name="name" placeholder="Name" pattern="^[a-zA-Zа-яА-ЯёЁ]+\s[a-zA-Zа-яА-ЯёЁ]+$" title="Username must be two words separated by space." required>
+            <input type="tel" name="phone" placeholder="Phone" pattern="^\+[1-9]\d{1,14}$" title="The phone number must start with +, contain only numbers and no spaces." required>
+            <textarea name="comment" placeholder="Comment"></textarea>
+            <button type="submit" class="modal-btn">Submit</button>
+        </form>
+    </div>
+
+
+    <div class="modal" id="modal-readmore">
+        <button type="button" class="close-modal-btn">
+            <svg class="icon-close">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <h2 class="modal-title">How it's made?</h2>
+        <iframe
+          id="youtube-video"
+          class="video"
+          width="448"
+          height="205"
+          src="https://www.youtube.com/embed/_6yaRG4XVc8"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+        <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+    </div>
+
+
+    <div class="modal" id="modal-locations">
+        <button type="button" class="close-modal-btn">
+            <svg class="icon-close">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <h2 class="modal-title">Our Locations</h2>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387193.05057834514!2d-74.30916385488808!3d40.69719335517572!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2z0J3RjNGOLdCZ0L7RgNC6LCDQodCo0JA!5e0!3m2!1sru!2sua!4v1744207917419!5m2!1sru!2sua" 
+          width="600" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade"
+          class="google-map">
+        </iframe>
+        
+        <a 
+          href="https://www.google.com.ua/maps/place/%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%A1%D0%A8%D0%90/@40.6971934,-74.3091639,10z/data=!3m1!4b1!4m6!3m5!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728!16zL20vMDJfMjg2?hl=ru&entry=ttu&g_ep=EgoyMDI1MDQwNi4wIKXMDSoASAFQAw%3D%3D" 
+          target="_blank" 
+          class="map-btn modal-btn">Open map</a>
+
+    </div>
+
+
+    <div class="modal franchise" id="modal-franchise">
+        <button type="button" class="close-modal-btn">
+            <svg class="icon-close">
+                <use href="./images/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+        <h2 class="modal-title" >Thank you for your interest in owning an Ice Cream shop</h2>
+        <p class="description" >Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once the application process resumes, we will contact you for further information. Please fill out the contact information below and we will reach out for additional information. We appreciate your patience.</p>
+        <form class="form" autocomplete="off">
+            <input type="text" name="name" placeholder="Name" pattern="^[a-zA-Zа-яА-ЯёЁ]+\s[a-zA-Zа-яА-ЯёЁ]+$" title="Username must be two words separated by space." required>
+            <input type="tel" name="phone" placeholder="Phone" pattern="^\+[1-9]\d{1,14}$" title="The phone number must start with +, contain only numbers and no spaces." required>
+            <input type="email" name="email" placeholder="Email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="Enter your email in the format: name@example.com" required>
+            <textarea name="comment" placeholder="Comment"></textarea>
+            <button type="submit" class="modal-btn">Submit</button>
+        </form>
+    </div>
+
+    
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./js/swiper.js"></script>
     <script type="module" src="./js/hero-arrow.js"></script>
+    <script type="module" src="./js/modals.js"></script>
 </body>
 </html>
