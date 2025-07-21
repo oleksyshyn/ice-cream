@@ -6,7 +6,7 @@ var photoSwiper = new Swiper(".photoSwiper", {
         disableOnInteraction: false,   // Продовжує автоплей після взаємодії
     },
     simulateTouch: true,               // Додає можливість перетягувати фото мишкою
-    grabCursor: true,                  // Змінює курсор на "руку" при перетягуванні
+    // grabCursor: true,                  // Змінює курсор на "руку" при перетягуванні
     spaceBetween: 100,                 // Відстань між слайдами (у пікселях)
 });
 

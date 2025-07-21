@@ -10,17 +10,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Seymour+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/styles.css">
+    <link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg" />
+    <link rel="icon" type="image/png" href="./images/favicon/favicon.png" />
 </head>
 
 <body>
     <header class="header">
         <div class="container header-container">
             <a href="">
-                <img src="./images/logo.png" alt="Logo" width="60">
+                <img class="logo" 
+                    src="./images/logo-mobile.png" 
+                    srcset="
+                        ./images/logo-mobile.png 40w,
+                        ./images/logo-mobile@2x.png 80w,
+                        ./images/logo-tablet.png 48w,
+                        ./images/logo-tablet@2x.png 96w,
+                        ./images/logo-desktop.png 60w,
+                        ./images/logo-desktop@2x.png 120w
+                    "
+                    sizes="
+                        (min-width: 1200px) 60px,
+                        (min-width: 480px) 48px,
+                        40px
+                    " 
+                    alt="Logo"
+                    >
+                    
             </a>
             
             <div class="wrapper">
-                <nav>
+                <nav class="header-nav">
                     <ul class="nav-list list">
                         <li><a href="" class="link">Home</a></li>
                         <li><a href="#how_its_made" class="link">How it's made?</a></li>
@@ -28,6 +47,12 @@
                         <li><a href="#contacts" class="link">Contacts</a></li>
                     </ul>
                 </nav>
+
+                <button type="button" class="btn-menu js-open-menu" aria-expanded="false">
+                    <svg class="icon-menu">
+                        <use href="./images/icons.svg#icon-menu"></use>
+                    </svg>
+                </button>
     
                 <button type="button" class="btn primary-btn open-modal-btn" data-modal-target="modal-buynow">Buy now
                     <svg class="icon-arrow">
@@ -36,6 +61,49 @@
                 </button>
             </div>
         </div>
+
+        <div class="mobile-menu js-menu-container">
+            <a href="" class="logo">
+                <img  
+                    src="./images/logo-mobile.png" 
+                    srcset="
+                        ./images/logo-mobile.png 40w,
+                        ./images/logo-mobile@2x.png 80w,
+                        ./images/logo-tablet.png 48w,
+                        ./images/logo-tablet@2x.png 96w,
+                        ./images/logo-desktop.png 60w,
+                        ./images/logo-desktop@2x.png 120w
+                    "
+                    sizes="
+                        (min-width: 1200px) 60px,
+                        (min-width: 480px) 48px,
+                        40px
+                    " 
+                    alt="Logo"
+                >   
+            </a>
+
+            <button type="button" class="menu-close-btn js-close-menu" aria-expanded="false">
+                <svg class="icon-menu-close">
+                    <use href="./images/icons.svg#icon-close-menu"></use>
+                </svg>
+            </button>
+
+            <nav class="mobile-menu-nav">
+                <ul class="mobile-menu-nav-list list">
+                    <li><a href="" class="link">Home</a></li>
+                    <li><a href="#how_its_made" class="link js-nav-link">How it's made?</a></li>
+                    <li><a href="#products" class="link js-nav-link">Our products</a></li>
+                    <li><a href="#contacts" class="link js-nav-link">Contacts</a></li>
+                </ul>
+            </nav>
+
+            <button type="button" class="btn primary-btn open-modal-btn" data-modal-target="modal-buynow">Buy now
+                <svg class="icon-arrow">
+                    <use href="./images/icons.svg#icon-arrow"></use>
+                </svg>
+            </button>
+        </div>
     </header>
 
     <main>
@@ -43,14 +111,16 @@
             <div class="container hero-container">
                 <div class="hero-content">
                     <div>
-                        <h1 class="hero-title">ICE CREAM MADE WITH PASSION</h1>
+                        <h1 class="hero-title">ICE CREAM MADE WITH 
+                            <span class="hero-title-word">PASSION</span>
+                        </h1>
     
                         <ul class="list">
                             <li>
                                 <a href="#products" class="btn secondary-btn link">Products</a>
                             </li>
                             <li>
-                                <a href="#how_its_made" class="hero-link">How it's made?</a>
+                                <a href="#how_its_made" class="hero-link link">How it's made?</a>
                             </li>
                         </ul>
                     </div>
@@ -62,7 +132,20 @@
                 </div>
                 
                 <div class="hero-details">
-                    <img src="./images/ice-cream-circle.png" alt="ice-cream on plate">
+                    <img 
+                        src="./images/ice-cream-plate.png" 
+                        srcset="
+                            ./images/ice-cream-plate.png 152w,
+                            ./images/ice-cream-plate@2x.png 304w,
+                            ./images/ice-cream-plate-desktop.png 225w,
+                            ./images/ice-cream-plate-desktop@2x.png 450w,
+                        "
+                        sizes="
+                            (min-width: 1200px) 225px,
+                            152px
+                        "
+                        alt="ice-cream on plate"
+                    >
                     <div class="hero-info">
                         <p id="hero-text" class="hero-text">Indulge in a scoop of ice cream made with passion and treat your taste buds to an unforgettable experience!</p>
                         <button id="hero-arrow-btn" type="button" class="arrow-btn">
@@ -72,7 +155,26 @@
                         </button>
                     </div>
                 </div>
-                <img class="big-ice-cream" src="./images/big-ice-cream.png" alt="ice-cream">
+                <img class="big-ice-cream" 
+                    src="./images/big-ice-cream-mobile-177.png" 
+                    srcset="
+                        ./images/big-ice-cream-mobile-177.png 177w, 
+                        ./images/big-ice-cream-mobile-177@2x.png 354w, 
+                        ./images/big-ice-cream-mobile-218.png 218w,
+                        ./images/big-ice-cream-mobile-218@2x.png 436w,
+                        ./images/big-ice-cream-tablet-268.png 268w,
+                        ./images/big-ice-cream-tablet-268@2x.png 536w,
+                        ./images/big-ice-cream-desktop-456.png 456w,
+                        ./images/big-ice-cream-desktop-456@2x.png 912w,
+                    " 
+                    sizes="
+                        (min-width: 1200px) 456px,
+                        (min-width: 768px) 268px,
+                        (min-width: 480px) 218px,
+                        177px
+                    "    
+                    alt="ice-cream"
+                >
             </div>
         </section>
 
@@ -160,43 +262,44 @@
         
         <section class="gallery">
             <h2 class="visually-hidden">Gallery</h2>
-
-            <div class="swiper photoSwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide"><img src="./images/gallery1.jpg" alt="A lot of ice cream"></div>
-                    <div class="swiper-slide"><img src="./images/gallery2.jpg" alt="Five ice cream cones"></div>
-                    <div class="swiper-slide"><img src="./images/gallery3.jpg" alt="Five popsicles"></div>
-                </div>
-            </div>
-
-            <div class="swiper reviewSwiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <div class="review">
-                            <img src="./images/customer1.jpg" alt="Emily's photo">
-                            <p class="review-text">I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In addition, you have beautiful serving, cozy atmosphere and polite staff.</p>
-                            <p class="customer-name">Emily, Los Angeles</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="review">
-                            <img src="./images/customer2.jpg" alt="Bryan's photo">
-                            <p class="review-text">Every day we come to you with friends after classes in college. We love your ice cream and casual atmosphere!</p>
-                            <p class="customer-name">Bryan, New-York</p>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <div class="review">
-                            <img src="./images/customer3.jpg" alt="Diana's photo">
-                            <p class="review-text">Ice cream is my passion! I love your chocolate hazelnut ice cream! And I really like the excellent service - always served politely and quickly!</p>
-                            <p class="customer-name">Diana, Chicago</p>
-                        </div>
-                    </div>
-                </div>
             
-                <div class="swiper-pagination"></div>
-            </div>
-                
+            <div class="container">
+                <div class="swiper photoSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./images/gallery1.jpg" alt="A lot of ice cream"></div>
+                        <div class="swiper-slide"><img src="./images/gallery2.jpg" alt="Five ice cream cones"></div>
+                        <div class="swiper-slide"><img src="./images/gallery3.jpg" alt="Five popsicles"></div>
+                    </div>
+                </div>
+
+                <div class="swiper reviewSwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <img src="./images/customer1.jpg" srcset="./images/customer1.jpg 1x, ./images/customer1@2x.jpg 2x" alt="Emily's photo">
+                                <p class="review-text">I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In addition, you have beautiful serving, cozy atmosphere and polite staff.</p>
+                                <p class="customer-name">Emily, Los Angeles</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <img src="./images/customer2.jpg" srcset="./images/customer2.jpg 1x, ./images/customer2@2x.jpg 2x" alt="Bryan's photo">
+                                <p class="review-text">Every day we come to you with friends after classes in college. We love your ice cream and casual atmosphere!</p>
+                                <p class="customer-name">Bryan, New-York</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="review">
+                                <img src="./images/customer3.jpg" srcset="./images/customer3.jpg 1x, ./images/customer3@2x.jpg 2x" alt="Diana's photo">
+                                <p class="review-text">Ice cream is my passion! I love your chocolate hazelnut ice cream! And I really like the excellent service - always served politely and quickly!</p>
+                                <p class="customer-name">Diana, Chicago</p>
+                            </div>
+                        </div>
+                    </div>
+            
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>  
         </section>
 
         <section id="contacts" class="contacts">
@@ -220,7 +323,7 @@
                             </li>
                         </ul>
                         
-                        <div>
+                        <div class="contact-link-list">
                             <a href="tel:+610383766284" class="link">+61(0) 383 766 284</a>
                             <a href="mailto:noreply@envato.com" class="link">noreply@envato.com</a>
                         </div>
@@ -241,7 +344,7 @@
                             </li>
                         </ul>
                         
-                        <div>
+                        <div class="contact-link-list">
                             <a href="tel:+610383766284" class="link">+61(0) 383 766 284</a>
                             <a href="mailto:noreply@envato.com" class="link">noreply@envato.com</a>
                         </div>
@@ -262,7 +365,7 @@
                             </li>
                         </ul>
                         
-                        <div>
+                        <div class="contact-link-list">
                             <a href="tel:+610383766284" class="link">+61(0) 383 766 284</a>
                             <a href="mailto:noreply@envato.com" class="link">noreply@envato.com</a>
                         </div>
@@ -321,13 +424,16 @@
                     </li>
                 </ul>
         
-                <p class="footer-contact">Feel free to contact 
+                <p class="footer-contact">Feel free to contact&nbsp; 
                     <a href="tel:+610383766284" class="footer-tel link">+61(0) 383 766 284</a>
                 </p>
             </div>
         </div>
 
-        <p class="copyright">© 2022 - IceCream. All Rights Reserved.</p>
+        <div class="all-rights">
+            <p class="copyright">© 2022 - IceCream.&nbsp;</p>
+            <p class="copyright"> All Rights Reserved.</p>
+        </div> 
     </footer>
 
 
@@ -338,10 +444,11 @@
     <div class="modal modal-buynow" id="modal-buynow">
         <button type="button" class="close-modal-btn">
             <svg class="icon-close">
-                <use href="./images/icons.svg#icon-close"></use>
+                <!-- <use href="./images/icons.svg#icon-close"></use> -->
+                <use href="./images/icons.svg#icon-close-menu"></use>
             </svg>
         </button>
-
+        
         <form class="form" autocomplete="off">
             <h2 class="modal-title">Buy now</h2>
 
@@ -386,7 +493,7 @@
         <h2 class="modal-title">Chocolate icecream</h2>
 
         <div class="product-background">
-            <img class="product-background-image" src="./images/chocolate-icecream.png" alt="chocolate-icecream">
+            <img class="product-background-image" src="./images/product4-132.png" srcset="./images/product4-132.png 1x, ./images/product4-132@2x.png 2x" alt="Chocolate icecream">
         </div>
 
         <ul class="product-info-list list">
@@ -396,7 +503,7 @@
             </li>
             <li class="product-info">
                 <p class="product-info-number">4g </p>
-                <p class="product-info-description">Protein...</p>
+                <p class="product-info-description">Protein</p>
             </li>
             <li class="product-info">
                 <p class="product-info-number">8,2g</p>
@@ -456,7 +563,7 @@
         <h2 class="modal-title">Ice coffee</h2>
 
         <div class="product-background">
-            <img class="product-background-image" src="./images/product2.png" alt="chocolate-icecream" width="132" height="132">
+            <img class="product-background-image" src="./images/product2-132.png" srcset="./images/product2-132.png 1x, ./images/product2-132@2x.png 2x" alt="Ice coffee" width="132" height="132">
         </div>
 
         <ul class="product-info-list list">
@@ -526,7 +633,7 @@
         <h2 class="modal-title">Milkshakes</h2>
 
         <div class="product-background">
-            <img class="product-background-image" src="./images/product3.png" alt="chocolate-icecream" width="132" height="132">
+            <img class="product-background-image" src="./images/product3-132.png" srcset="./images/product3-132.png 1x, ./images/product3-132@2x.png 2x" alt="Milkshakes" width="132" height="132">
         </div>
 
         <ul class="product-info-list list">
@@ -650,10 +757,11 @@
         </form>
     </div>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./js/swiper.js"></script>
     <script type="module" src="./js/hero-arrow.js"></script>
     <script type="module" src="./js/modals.js"></script>
+    <script type="module" src="./js/mobile-menu.js"></script>
 </body>
 </html>
