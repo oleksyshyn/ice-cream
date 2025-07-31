@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>IceCream</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Seymour+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/3.0.1/modern-normalize.min.css" integrity="sha512-q6WgHqiHlKyOqslT/lgBgodhd03Wp4BEqKeW6nNtlOY4quzyG3VoQKFrieaCeSnuVseNKRGpGeDU3qPmabCANg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg" />
-    <link rel="icon" type="image/png" href="./images/favicon/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="./images/favicon/favicon.svg">
+    <link rel="icon" type="image/png" href="./images/favicon/favicon.png">
 </head>
 
 <body>
@@ -34,8 +34,7 @@
                         40px
                     " 
                     alt="Logo"
-                    >
-                    
+                >                   
             </a>
             
             <div class="wrapper">
@@ -48,7 +47,7 @@
                     </ul>
                 </nav>
 
-                <button type="button" class="btn-menu js-open-menu" aria-expanded="false">
+                <button type="button" class="btn-menu js-open-menu" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu">
                     <svg class="icon-menu">
                         <use href="./images/icons.svg#icon-menu"></use>
                     </svg>
@@ -62,7 +61,7 @@
             </div>
         </div>
 
-        <div class="mobile-menu js-menu-container">
+        <div class="mobile-menu js-menu-container" id="mobile-menu">
             <a href="" class="logo">
                 <img  
                     src="./images/logo-mobile.png" 
@@ -83,7 +82,7 @@
                 >   
             </a>
 
-            <button type="button" class="menu-close-btn js-close-menu" aria-expanded="false">
+            <button type="button" class="menu-close-btn js-close-menu" aria-label="Close menu" aria-expanded="false">
                 <svg class="icon-menu-close">
                     <use href="./images/icons.svg#icon-close-menu"></use>
                 </svg>
@@ -138,7 +137,7 @@
                             ./images/ice-cream-plate.png 152w,
                             ./images/ice-cream-plate@2x.png 304w,
                             ./images/ice-cream-plate-desktop.png 225w,
-                            ./images/ice-cream-plate-desktop@2x.png 450w,
+                            ./images/ice-cream-plate-desktop@2x.png 450w
                         "
                         sizes="
                             (min-width: 1200px) 225px,
@@ -146,15 +145,17 @@
                         "
                         alt="ice-cream on plate"
                     >
+
                     <div class="hero-info">
                         <p id="hero-text" class="hero-text">Indulge in a scoop of ice cream made with passion and treat your taste buds to an unforgettable experience!</p>
-                        <button id="hero-arrow-btn" type="button" class="arrow-btn">
+                        <button id="hero-arrow-btn" type="button" class="arrow-btn" aria-label="Show text">
                             <svg id="arrow" class="icon-long-arrow">
                                 <use href="./images/icons.svg#icon-long-arrow"></use>
                             </svg>
                         </button>
                     </div>
                 </div>
+
                 <img class="big-ice-cream" 
                     src="./images/big-ice-cream-mobile-177.png" 
                     srcset="
@@ -165,7 +166,7 @@
                         ./images/big-ice-cream-tablet-268.png 268w,
                         ./images/big-ice-cream-tablet-268@2x.png 536w,
                         ./images/big-ice-cream-desktop-456.png 456w,
-                        ./images/big-ice-cream-desktop-456@2x.png 912w,
+                        ./images/big-ice-cream-desktop-456@2x.png 912w
                     " 
                     sizes="
                         (min-width: 1200px) 456px,
@@ -187,7 +188,7 @@
                     <li class="product-list-item">
                         <h3 class="product-name">ICE CREAM</h3>
                         <p>Soft ice cream with a delicate taste. Made with milk, cream, sugar and natural stabilizer</p>
-                        <button class="arrow-btn open-modal-btn" data-modal-target="modal-ice-cream">
+                        <button class="arrow-btn open-modal-btn" data-modal-target="modal-ice-cream" aria-label="Open modal">
                             <svg class="icon-long-arrow">
                                 <use href="./images/icons.svg#icon-long-arrow"></use>
                             </svg>
@@ -196,7 +197,7 @@
                     <li class="product-list-item">
                         <h3 class="product-name">ICE COFFEE</h3>
                         <p>Fragrant invigorating drink created from 100% natural ingredients without the use of preservatives and flavor enhancers</p>
-                        <button class="arrow-btn open-modal-btn" data-modal-target="modal-ice-coffee">
+                        <button class="arrow-btn open-modal-btn" data-modal-target="modal-ice-coffee" aria-label="Open modal">
                             <svg class="icon-long-arrow">
                                 <use href="./images/icons.svg#icon-long-arrow"></use>
                             </svg>
@@ -205,7 +206,7 @@
                     <li class="product-list-item">
                         <h3 class="product-name">MILKSHAKES</h3>
                         <p>Sweet drinks based on milk and ice cream, supplemented with syrups, fruits, berries and other sweets of your choice</p>
-                        <button class="arrow-btn open-modal-btn" data-modal-target="modal-milkshakes">
+                        <button class="arrow-btn open-modal-btn" data-modal-target="modal-milkshakes" aria-label="Open modal">
                             <svg class="icon-long-arrow">
                                 <use href="./images/icons.svg#icon-long-arrow"></use>
                             </svg>
@@ -266,9 +267,9 @@
             <div class="container">
                 <div class="swiper photoSwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide"><img src="./images/gallery1.jpg" alt="A lot of ice cream"></div>
-                        <div class="swiper-slide"><img src="./images/gallery2.jpg" alt="Five ice cream cones"></div>
-                        <div class="swiper-slide"><img src="./images/gallery3.jpg" alt="Five popsicles"></div>
+                        <div class="swiper-slide"><img src="./images/gallery1.jpg" alt="A lot of ice cream" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="./images/gallery2.jpg" alt="Five ice cream cones" loading="lazy"></div>
+                        <div class="swiper-slide"><img src="./images/gallery3.jpg" alt="Five popsicles" loading="lazy"></div>
                     </div>
                 </div>
 
@@ -276,21 +277,21 @@
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <div class="review">
-                                <img src="./images/customer1.jpg" srcset="./images/customer1.jpg 1x, ./images/customer1@2x.jpg 2x" alt="Emily's photo">
+                                <img src="./images/customer1.jpg" srcset="./images/customer1.jpg 1x, ./images/customer1@2x.jpg 2x" alt="Emily's photo" loading="lazy">
                                 <p class="review-text">I love visiting your cafe. You prepare the most delicious ice cream in Los Angeles! In addition, you have beautiful serving, cozy atmosphere and polite staff.</p>
                                 <p class="customer-name">Emily, Los Angeles</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="review">
-                                <img src="./images/customer2.jpg" srcset="./images/customer2.jpg 1x, ./images/customer2@2x.jpg 2x" alt="Bryan's photo">
+                                <img src="./images/customer2.jpg" srcset="./images/customer2.jpg 1x, ./images/customer2@2x.jpg 2x" alt="Bryan's photo" loading="lazy">
                                 <p class="review-text">Every day we come to you with friends after classes in college. We love your ice cream and casual atmosphere!</p>
                                 <p class="customer-name">Bryan, New-York</p>
                             </div>
                         </div>
                         <div class="swiper-slide">
                             <div class="review">
-                                <img src="./images/customer3.jpg" srcset="./images/customer3.jpg 1x, ./images/customer3@2x.jpg 2x" alt="Diana's photo">
+                                <img src="./images/customer3.jpg" srcset="./images/customer3.jpg 1x, ./images/customer3@2x.jpg 2x" alt="Diana's photo" loading="lazy">
                                 <p class="review-text">Ice cream is my passion! I love your chocolate hazelnut ice cream! And I really like the excellent service - always served politely and quickly!</p>
                                 <p class="customer-name">Diana, Chicago</p>
                             </div>
@@ -434,6 +435,12 @@
             <p class="copyright">© 2022 - IceCream.&nbsp;</p>
             <p class="copyright"> All Rights Reserved.</p>
         </div> 
+
+        <button type="button" class="btn-up" aria-label="Scroll up">
+            <svg class="btn-up-icon">
+                <use href="./images/icons.svg#icon-arrow"></use>
+            </svg>
+        </button>
     </footer>
 
 
@@ -442,9 +449,8 @@
     <div class="backdrop" id="modal-backdrop"></div>
 
     <div class="modal modal-buynow" id="modal-buynow">
-        <button type="button" class="close-modal-btn">
+        <button type="button" class="close-modal-btn" aria-label="Close modal">
             <svg class="icon-close">
-                <!-- <use href="./images/icons.svg#icon-close"></use> -->
                 <use href="./images/icons.svg#icon-close-menu"></use>
             </svg>
         </button>
@@ -472,28 +478,26 @@
                     </label>
                 </li>
             </ul>
-        
             
-            <input class="buynow-modal-form-inputs" type="text" name="name" placeholder="Name" pattern="^[a-zA-Zа-яА-ЯёЁ]+\s[a-zA-Zа-яА-ЯёЁ]+$" title="Username must be two words separated by space." required>
-            <input class="buynow-modal-form-inputs" type="tel" name="phone" placeholder="Phone" pattern="^\+[1-9]\d{1,14}$" title="The phone number must start with +, contain only numbers and no spaces." required>
-            <textarea class="buynow-modal-form-inputs" name="comment" placeholder="Comment"></textarea>
-        
+            <input class="buynow-modal-form-inputs" type="text" name="name" placeholder="Name" aria-label="Name" pattern="^[a-zA-Zа-яА-ЯёЁ\s]+$" title="Username must contain only letters" required>
+            <input class="buynow-modal-form-inputs" type="tel" name="phone" placeholder="Phone" aria-label="Phone" pattern="^\d{1,15}$" title="The phone number must contain only numbers" required>
+            <textarea class="buynow-modal-form-inputs" name="comment" placeholder="Comment" aria-label="Comment"></textarea>
             <button type="submit" class="modal-btn">Submit</button>
         </form>
     </div>
 
 
     <div class="modal modal-product modal-ice-cream" id="modal-ice-cream">
-        <button type="button" class="close-modal-btn">
+        <button type="button" class="close-modal-btn" aria-label="Close modal">
             <svg class="icon-close">
-                <use href="./images/icons.svg#icon-close"></use>
+                <use href="./images/icons.svg#icon-close-menu"></use>
             </svg>
         </button>
 
         <h2 class="modal-title">Chocolate icecream</h2>
 
         <div class="product-background">
-            <img class="product-background-image" src="./images/product4-132.png" srcset="./images/product4-132.png 1x, ./images/product4-132@2x.png 2x" alt="Chocolate icecream">
+            <img class="product-background-image" src="./images/product4-132.png" srcset="./images/product4-132.png 1x, ./images/product4-132@2x.png 2x" alt="Chocolate icecream" loading="lazy">
         </div>
 
         <ul class="product-info-list list">
@@ -545,25 +549,25 @@
         </ul>
 
         <form class="form" autocomplete="off">
-            <input type="text" name="name" placeholder="Name" pattern="^[a-zA-Zа-яА-ЯёЁ]+\s[a-zA-Zа-яА-ЯёЁ]+$" title="Username must be two words separated by space." required>
-            <input type="tel" name="phone" placeholder="Phone" pattern="^\+[1-9]\d{1,14}$" title="The phone number must start with +, contain only numbers and no spaces." required>
-            <textarea name="comment" placeholder="Comment"></textarea>
+            <input type="text" name="name" placeholder="Name" aria-label="Name" pattern="^[a-zA-Zа-яА-ЯёЁ\s]+$" title="Username must contain only letters" required>
+            <input type="tel" name="phone" placeholder="Phone" aria-label="Phone" pattern="^\d{1,15}$" title="The phone number must contain only numbers" required>
+            <textarea name="comment" placeholder="Comment" aria-label="Comment"></textarea>
             <button type="submit" class="modal-btn">Submit</button>
         </form>
     </div>
 
 
     <div class="modal modal-product modal-ice-coffee" id="modal-ice-coffee">
-        <button type="button" class="close-modal-btn">
+        <button type="button" class="close-modal-btn" aria-label="Close modal">
             <svg class="icon-close">
-                <use href="./images/icons.svg#icon-close"></use>
+                <use href="./images/icons.svg#icon-close-menu"></use>
             </svg>
         </button>
 
         <h2 class="modal-title">Ice coffee</h2>
 
         <div class="product-background">
-            <img class="product-background-image" src="./images/product2-132.png" srcset="./images/product2-132.png 1x, ./images/product2-132@2x.png 2x" alt="Ice coffee" width="132" height="132">
+            <img class="product-background-image" src="./images/product2-132.png" srcset="./images/product2-132.png 1x, ./images/product2-132@2x.png 2x" alt="Ice coffee" width="132" height="132" loading="lazy">
         </div>
 
         <ul class="product-info-list list">
@@ -615,25 +619,25 @@
         </ul>
 
         <form class="form" autocomplete="off">
-            <input type="text" name="name" placeholder="Name" pattern="^[a-zA-Zа-яА-ЯёЁ]+\s[a-zA-Zа-яА-ЯёЁ]+$" title="Username must be two words separated by space." required>
-            <input type="tel" name="phone" placeholder="Phone" pattern="^\+[1-9]\d{1,14}$" title="The phone number must start with +, contain only numbers and no spaces." required>
-            <textarea name="comment" placeholder="Comment"></textarea>
+            <input type="text" name="name" placeholder="Name" aria-label="Name" pattern="^[a-zA-Zа-яА-ЯёЁ\s]+$" title="Username must contain only letters" required>
+            <input type="tel" name="phone" placeholder="Phone" aria-label="Phone" pattern="^\d{1,15}$" title="The phone number must contain only numbers" required>
+            <textarea name="comment" placeholder="Comment" aria-label="Comment"></textarea>
             <button type="submit" class="modal-btn">Submit</button>
         </form>
     </div>
 
 
     <div class="modal modal-product modal-milkshakes" id="modal-milkshakes">
-        <button type="button" class="close-modal-btn">
+        <button type="button" class="close-modal-btn" aria-label="Close modal">
             <svg class="icon-close">
-                <use href="./images/icons.svg#icon-close"></use>
+                <use href="./images/icons.svg#icon-close-menu"></use>
             </svg>
         </button>
 
         <h2 class="modal-title">Milkshakes</h2>
 
         <div class="product-background">
-            <img class="product-background-image" src="./images/product3-132.png" srcset="./images/product3-132.png 1x, ./images/product3-132@2x.png 2x" alt="Milkshakes" width="132" height="132">
+            <img class="product-background-image" src="./images/product3-132.png" srcset="./images/product3-132.png 1x, ./images/product3-132@2x.png 2x" alt="Milkshakes" width="132" height="132" loading="lazy">
         </div>
 
         <ul class="product-info-list list">
@@ -685,18 +689,18 @@
         </ul>
 
         <form class="form" autocomplete="off">
-            <input type="text" name="name" placeholder="Name" pattern="^[a-zA-Zа-яА-ЯёЁ]+\s[a-zA-Zа-яА-ЯёЁ]+$" title="Username must be two words separated by space." required>
-            <input type="tel" name="phone" placeholder="Phone" pattern="^\+[1-9]\d{1,14}$" title="The phone number must start with +, contain only numbers and no spaces." required>
-            <textarea name="comment" placeholder="Comment"></textarea>
+            <input type="text" name="name" placeholder="Name" aria-label="Name" pattern="^[a-zA-Zа-яА-ЯёЁ\s]+$" title="Username must contain only letters" required>
+            <input type="tel" name="phone" placeholder="Phone" aria-label="Phone" pattern="^\d{1,15}$" title="The phone number must contain only numbers" required>
+            <textarea name="comment" placeholder="Comment" aria-label="Comment"></textarea>
             <button type="submit" class="modal-btn">Submit</button>
         </form>
     </div>
 
 
     <div class="modal" id="modal-readmore">
-        <button type="button" class="close-modal-btn">
+        <button type="button" class="close-modal-btn" aria-label="Close modal">
             <svg class="icon-close">
-                <use href="./images/icons.svg#icon-close"></use>
+                <use href="./images/icons.svg#icon-close-menu"></use>
             </svg>
         </button>
         <h2 class="modal-title">How it's made?</h2>
@@ -708,16 +712,16 @@
           src="https://www.youtube.com/embed/_6yaRG4XVc8"
           title="YouTube video player"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen
-        ></iframe>
+          allowfullscreen>
+        </iframe>
         <p class="description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
     </div>
 
 
     <div class="modal" id="modal-locations">
-        <button type="button" class="close-modal-btn">
+        <button type="button" class="close-modal-btn" aria-label="Close modal">
             <svg class="icon-close">
-                <use href="./images/icons.svg#icon-close"></use>
+                <use href="./images/icons.svg#icon-close-menu"></use>
             </svg>
         </button>
         <h2 class="modal-title">Our Locations</h2>
@@ -736,32 +740,31 @@
           href="https://www.google.com.ua/maps/place/%D0%9D%D1%8C%D1%8E-%D0%99%D0%BE%D1%80%D0%BA,+%D0%A1%D0%A8%D0%90/@40.6971934,-74.3091639,10z/data=!3m1!4b1!4m6!3m5!1s0x89c24fa5d33f083b:0xc80b8f06e177fe62!8m2!3d40.7127753!4d-74.0059728!16zL20vMDJfMjg2?hl=ru&entry=ttu&g_ep=EgoyMDI1MDQwNi4wIKXMDSoASAFQAw%3D%3D" 
           target="_blank" 
           class="map-btn modal-btn">Open map</a>
-
     </div>
 
 
     <div class="modal franchise" id="modal-franchise">
-        <button type="button" class="close-modal-btn">
+        <button type="button" class="close-modal-btn" aria-label="Close modal">
             <svg class="icon-close">
-                <use href="./images/icons.svg#icon-close"></use>
+                <use href="./images/icons.svg#icon-close-menu"></use>
             </svg>
         </button>
         <h2 class="modal-title" >Thank you for your interest in owning an Ice Cream shop</h2>
         <p class="description" >Due to the overwhelming volume of franchise requests we are not accepting new franchisee applications at this time. Once the application process resumes, we will contact you for further information. Please fill out the contact information below and we will reach out for additional information. We appreciate your patience.</p>
         <form class="form" autocomplete="off">
-            <input type="text" name="name" placeholder="Name" pattern="^[a-zA-Zа-яА-ЯёЁ]+\s[a-zA-Zа-яА-ЯёЁ]+$" title="Username must be two words separated by space." required>
-            <input type="tel" name="phone" placeholder="Phone" pattern="^\+[1-9]\d{1,14}$" title="The phone number must start with +, contain only numbers and no spaces." required>
-            <input type="email" name="email" placeholder="Email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="Enter your email in the format: name@example.com" required>
-            <textarea name="comment" placeholder="Comment"></textarea>
+            <input type="text" name="name" placeholder="Name" aria-label="Name" pattern="^[a-zA-Zа-яА-ЯёЁ\s]+$" title="Username must contain only letters" required>
+            <input type="tel" name="phone" placeholder="Phone" aria-label="Phone" pattern="^\d{1,15}$" title="The phone number must contain only numbers" required>
+            <input type="email" name="email" placeholder="Email" aria-label="Email" pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$" title="Enter your email in the format: name@example.com" required>
+            <textarea name="comment" placeholder="Comment" aria-label="Comment"></textarea>
             <button type="submit" class="modal-btn">Submit</button>
         </form>
     </div>
-
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script type="module" src="./js/swiper.js"></script>
     <script type="module" src="./js/hero-arrow.js"></script>
     <script type="module" src="./js/modals.js"></script>
     <script type="module" src="./js/mobile-menu.js"></script>
+    <script type="module" src="./js/scroll-up.js"></script>
 </body>
 </html>
